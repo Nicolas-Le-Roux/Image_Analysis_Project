@@ -8,13 +8,16 @@ The SOCMINTEX project deals with analysis of social media posts and interactions
 The code contains two classes in a .py file. These classes are meant to simplify the use of computer vision models. Although Detectron2 has made working with such models much easier, the process can still be streamlined for the specific application of the SOCMINTEX project.
 
 ## Installation and other parameters
-As new releases come out, these may no longer be the most recent versions of the modules required to run the code. The following is the working configuration used in summer 2023, during the course of the internship.
-- Language and version : Python 3.9
-- Environment used : Conda
-- Modules :
+As new releases come out, the versions used during the project months may no longer be the most recent version. As such, only problematic modules, ones that caused problems when trying to install, have their versions listed.
+- **Language and version :** Python 3.9
+- **Environment used :** Conda
+- **Detectron2 :** Before downloading the other modules, the following instructions were entered into the cluster console.
+  - conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch-nightly -c nvidia
+  - conda install -c conda-forge pycocotools
+  - pip install opencv-python
+  - python -m pip install 'git+https://github.com/facebookresearch/detectron2.git'
+- **Other modules:**
   - copy
-  - cv2
-  - detectron2
   - glob
   - itertools
   - json
@@ -23,6 +26,5 @@ As new releases come out, these may no longer be the most recent versions of the
   - pandas
   - re
   - time
-  - torch
 
-**Remark**: The PyTorch version used is a nightly build, meaning it is not a full release. This was a necessary choice since the working CUDA version was too advanced for PyTorch's full releases at the time.
+**Remark**: The PyTorch version used is a nightly build, meaning it is not a full release. This was a necessary choice since the working CUDA version was too advanced for PyTorch's full releases at the time. See at https://pytorch.org/get-started/locally/ for the available versions.
