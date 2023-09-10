@@ -30,4 +30,19 @@ As new releases come out, the versions used during the project months may no lon
 **Remark**: The PyTorch version used is a nightly build, meaning it is not a full release. This was a necessary choice since the working CUDA version was too advanced for PyTorch's full releases at the time. See at https://pytorch.org/get-started/locally/ for the available versions.
 
 ## How to use the project classes
-The different methods in both classes have summary documentations, and the pdf document contains further insight into their use. For quick use, one needs to create an instance of the Image_Analyzer class, which will configure the deep learning model. From there, the methods analyze() and analyze_multiple() work with OpenCV images. As such, any image needed to be analyzed must be read via cv2.imread().
+For quick use of the main class, Image_Analyzer:
+1. Import Image_Analyzer from image_analysis.py
+2. Import OpenCV
+3. Create an instance of the Image_Analyzer class, which will configure the deep learning model.
+4. Choose an image, and read it with OpenCV's cv2.imread().
+5. Use the Image_Analyzer instance method analyze() to analyze the image and return information on it.
+
+For further information, please consult the method documentations (accessible with .__doc__) in the code. And for even further illustration, here is an example of the previous procedure:
+```
+from image_analysis import Image_Analyzer
+import cv2
+
+viewer = Image_Analyzer()
+img = cv2.imread("test_image.jpg")
+results, comparison = viewer.analyze(img, True)
+```
