@@ -44,5 +44,6 @@ import cv2
 
 viewer = Image_Analyzer()
 img = cv2.imread("test_image.jpg")
+# results is a Python list, comparison an OpenCV image that can be displayed using cv2.imshow()
 results, comparison = viewer.analyze(img, True)
 ```
