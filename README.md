@@ -12,10 +12,18 @@ As new releases come out, the versions used during the project months may no lon
 - **Language and version :** Python 3.9
 - **Environment used :** Conda
 - **Detectron2 :** Before downloading the other modules, the following instructions were entered into the cluster console.
-  - conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch-nightly -c nvidia
-  - conda install -c conda-forge pycocotools
-  - pip install opencv-python
-  - python -m pip install 'git+https://github.com/facebookresearch/detectron2.git'
+```
+conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch-nightly -c nvidia
+```
+```
+conda install -c conda-forge pycocotools
+```
+```
+pip install opencv-python
+```
+```
+python -m pip install 'git+https://github.com/facebookresearch/detectron2.git'
+```
 - **Other modules:**
   - copy
   - glob
